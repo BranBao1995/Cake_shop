@@ -1,0 +1,61 @@
+.cakeDisplay {
+
+    display: grid;
+
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] 94vh [main-end];
+    grid-template-columns: [full-start] 100% [full-end];
+
+}
+
+
+.jumbotron {
+
+    grid-row: nav-start / main-end;
+    grid-column: full-start / full-end;
+
+    display: grid;
+
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] 94vh [main-end];
+    grid-template-columns: [full-start] 100% [full-end];
+
+    z-index: 10;
+
+}
+
+.display {
+
+    grid-row: main-start / main-end;
+    grid-column: full-start / full-end;
+
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+
+    justify-items: center;
+    align-items: flex-start;
+
+
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .display {
+    
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    
+        row-gap: 2rem;
+
+        justify-items: center;
+        align-items: flex-start;
+    
+    
+    }
+
+
+}

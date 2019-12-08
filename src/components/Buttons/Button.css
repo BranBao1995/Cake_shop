@@ -1,0 +1,76 @@
+.button,
+.button:focus,
+.button:active {
+
+    display: block;
+
+    width: 5rem;
+    height: 4rem;
+
+
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.2;
+    font-size: 1.2rem;
+
+    margin-bottom: 5rem;
+
+}
+
+
+.button:hover {
+
+    transform: translateY(-1rem);
+
+    transition: all .3s;
+
+}
+
+
+.svg {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #d4227b;
+
+    margin-bottom: 1rem;
+
+}
+
+
+@media only screen and (max-width: 430px) {
+
+    .button,
+    .button:focus,
+    .button:active {
+
+        display: block;
+
+        width: 4rem;
+        height: 3rem;
+
+        margin: 0 1rem;
+
+
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        font-family: 'Indie Flower', cursive;
+        line-height: 1;
+        font-size: .8rem;
+
+        
+
+}
+
+
+}

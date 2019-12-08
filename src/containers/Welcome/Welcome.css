@@ -1,0 +1,9 @@
+.welcome {
+
+    display: grid;
+
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] 94vh [main-end];
+    grid-template-columns: [full-start] 100% [full-end];
+
+
+}

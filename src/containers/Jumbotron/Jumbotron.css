@@ -1,0 +1,112 @@
+.jumbotron {
+
+    grid-row: nav-start / main-end;
+    grid-column: full-start / full-end;
+
+    z-index: 10;
+
+    display: grid;
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] 90vh [main-end];
+
+}
+
+.jumbotron__main {
+
+    grid-row: main-start / main-end;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: [text-start] 50% [text-end button-start] 50% [button-end];
+
+}
+
+.jumbotron__text {
+
+    grid-row: 1 / 2;
+    grid-column: text-start / text-end;
+
+    text-align: center;
+
+    margin: auto 0;
+    padding: 0 3rem;
+
+}
+
+.jumbotron__buttons {
+
+    grid-row: 1 / 2;
+    grid-column: button-start / button-end;
+
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+
+}
+
+
+@media only screen and (max-width: 430px) {
+
+    .jumbotron__main {
+
+        grid-row: main-start / main-end;
+        grid-column: full-start / full-end;
+    
+        display: grid;
+        grid-template-rows: [text-start] 50% [text-end button-start] 50% [button-end];
+        grid-template-columns: [full-start] 100% [full-end];
+
+        justify-items: center;
+        align-items: center;
+    
+    }
+
+    .jumbotron__text {
+
+        grid-row: text-start / text-end;
+        grid-column: full-start / full-end;
+    
+        text-align: center;
+    
+        margin: auto 0;
+        padding: 0 3rem;
+    
+    }
+
+    .jumbotron__buttons {
+
+        grid-row: button-start / button-end;
+        grid-column: full-start / full-end;
+
+        align-self: flex-start;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+    }
+
+    p {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.1rem;
+    
+    }
+
+}

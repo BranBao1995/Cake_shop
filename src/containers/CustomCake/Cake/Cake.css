@@ -1,0 +1,35 @@
+.cake {
+
+    grid-row: 1 / 2;
+    grid-column: cake-start / cake-end;
+
+    margin: 0 3rem;
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .cake {
+
+    
+        margin: 0;
+    
+    
+    }
+
+}
+
+@media only screen and (max-width: 820px) {
+
+    .cake {
+
+        grid-row: cake-start / cake-end;
+        grid-column: full-start / full-end;
+    
+    
+    
+    }
+
+
+}

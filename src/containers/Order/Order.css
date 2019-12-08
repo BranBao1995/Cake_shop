@@ -1,0 +1,45 @@
+.order {
+
+    display: grid;
+
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] min-content [main-end];
+    grid-template-columns: [full-start] 100% [full-end];
+
+}
+
+.infoSection {
+
+    grid-row: main-start / main-end;
+    grid-column: full-start / full-end;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 6rem;
+
+}
+
+.info {
+
+    width: 40%;
+    height: auto;
+
+}
+
+.info p {
+
+    font-family: 'Assistant', sans-serif;
+
+}
+
+.contacts {
+
+    margin-top: 2rem;
+
+}
+
+.contacts p {
+    font-family: 'Assistant', sans-serif;
+}

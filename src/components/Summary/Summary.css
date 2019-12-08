@@ -1,0 +1,328 @@
+.buildSummary {
+
+    margin-top: 2.5rem;
+    padding: 5rem 2rem;
+
+    grid-row: main-middle / main-end;
+    grid-column: full-start / full-end;
+
+    display: grid;
+
+    grid-template-columns: [summary-start] 40% [summary-end option-start] 20% [option-end checkout-start] 40% [checkout-end];
+
+    background-color: #f5d3b0;
+
+}
+
+
+.summary {
+
+    grid-column: summary-start / summary-end;
+
+    display: grid;
+    row-gap: 1.3rem;
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+.summary h2 {
+
+    font-size: 2.5rem;
+    font-family: 'Caveat', cursive;
+
+}
+
+.selections p {
+
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
+
+}
+
+.options {
+
+    grid-column: option-start / option-end;
+
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+}
+
+.form {
+
+    display: grid;
+
+    align-items: center;
+
+    row-gap: 1.2rem;
+
+}
+
+.formGroup {
+
+    display: flex;
+
+    align-items: center;
+    
+
+}
+
+.inputField {
+
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    font-family: 'Caveat', cursive;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.inputField input {
+
+    position: absolute;
+
+
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+}
+
+.customRadio {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+
+}
+
+.inputField:hover input ~ .customRadio {
+
+    background-color: #ccc;
+
+}
+
+.inputField input:checked ~ .customRadio {
+    background-color: #2196F3;
+}
+
+.customRadio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.inputField input:checked ~ .customRadio:after {
+    display: block;
+}
+  
+.inputField .customRadio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.checkout {
+
+    grid-column: checkout-start / checkout-end;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checkout div {
+
+    /* border-radius: 5px; */
+    display: flex;
+    align-items: center;
+
+    transition: all .2s;
+
+}
+
+.checkout div span {
+
+    color: #d4227b;
+    font-size: 1.8rem;
+
+    animation-name: vibrate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.checkout button {
+
+    display: block;
+    width: 10rem;
+    height: auto;
+
+    border: none;
+    outline: none;
+
+    /* border-radius: 5px; */
+
+    background-color: transparent;
+    font-size: 2.3rem;
+    font-family: 'Caveat', cursive;
+    color: #d4227b;
+
+    cursor: pointer;
+
+    transition: all .2s;
+
+}
+
+.checkout div:hover {
+    /* background-color: rgba(107, 105, 101, .4); */
+    
+}
+
+.checkout button:hover {
+
+    padding-bottom: .3rem;
+    border-bottom: 2px solid #d4227b;
+    transform: translateY(-.5rem);
+
+}
+
+@keyframes vibrate {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(.7rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .buildSummary {
+
+        margin-top: 4rem;
+        padding: 3rem 0;
+
+        display: grid;
+
+        grid-template-columns: [summary-start] 50% [summary-end option-start] 25% [option-end checkout-start] 25% [checkout-end];
+        
+    
+    }
+
+    .summary h2 {
+
+        font-size: 2rem;
+    
+    }
+    
+    .selections p {
+    
+        font-family: 'Caveat', cursive;
+        font-weight: lighter;
+    
+    }
+
+    .checkout div span {
+
+        font-size: 1.3rem;
+    
+    }
+    
+    .checkout button {
+    
+        display: block;
+        width: 8rem;
+        height: auto;
+        
+        font-size: 2rem;
+        
+        
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .buildSummary {
+
+        margin: 2rem 0;
+        padding: 2rem 0;
+    
+        display: grid;
+    
+        grid-template-rows: [summary-start] min-content [summary-end option-start] min-content [option-end checkout-start] min-content [checkout-end];
+    
+        grid-template-columns: [full-start] 100% [full-end];
+
+        row-gap: 3rem;
+    
+    }
+
+    .summary {
+
+        grid-row: summary-start / summary-end;
+        grid-column: full-start / full-end;
+    
+    }
+
+    .options {
+
+        grid-row: option-start / option-end;
+        grid-column: full-start / full-end;
+    
+        display: grid;
+    
+        justify-items: center;
+        align-items: center;
+    
+    }
+
+    .checkout {
+
+        grid-row: checkout-start / checkout-end;
+        grid-column: full-start / full-end;
+    
+        display: flex;
+    
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .inputField {
+
+        margin: 0;
+        
+    }
+
+
+}

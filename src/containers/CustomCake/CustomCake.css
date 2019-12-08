@@ -1,0 +1,244 @@
+.customCake {
+
+    display: grid;
+
+    grid-template-rows: [nav-start] 3.5rem [nav-end main-start] min-content [main-middle] min-content [main-end];
+    grid-template-columns: [full-start] 100% [full-end];
+
+}
+
+
+.cakeBuilding {
+
+    margin-top: 3rem;
+
+    grid-row: main-start / main-middle;
+    grid-column: full-start / full-end;
+
+
+    display: grid;
+    grid-template-columns: [cake-start] 50% [cake-end build-start] 50% [build-end];
+
+}
+
+.buildControl {
+
+    grid-row: 1 / 2;
+    grid-column: build-start / build-end;
+
+    padding: 0 3rem;
+
+    display: grid;
+
+
+    row-gap: 1rem;
+
+}
+
+.sauceOptions {
+
+    width: 100%;
+    height: auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.7rem;
+    color: #D4227B;
+
+
+}
+
+.toppingOptions {
+
+    width: 100%;
+    height: auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.7rem;
+    color: #D4227B;
+
+}
+
+.baseOptions {
+
+    width: 100%;
+    height: auto;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.7rem;
+    color: #D4227B;
+
+}
+
+@media only screen and (max-width: 1410px) {
+
+    .buildControl {
+    
+        padding: 0 1rem;
+
+        grid-row-gap: .6rem;
+    
+    }
+
+    .sauceOptions {
+
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+    
+    
+    }
+    
+    .toppingOptions {
+    
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+    
+    }
+    
+    .baseOptions {
+    
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+    
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .cakeBuilding {
+    
+    
+        display: grid;
+        grid-template-columns: [cake-start] 40% [cake-end build-start] 60% [build-end];
+    
+    }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .cakeBuilding {
+    
+        margin: 3rem 1.5rem;
+    
+        display: grid;
+        grid-template-columns: [cake-start] 40% [cake-end build-start] 60% [build-end];
+    
+    }
+
+    .buildControl {
+    
+        padding: 0;
+    
+    }
+
+}
+
+@media only screen and (max-width: 820px) {
+
+    .cakeBuilding {
+    
+        display: grid;
+        grid-template-rows: [cake-start] min-content [cake-end build-start] min-content [build-end];
+        grid-template-columns: [full-start] 100% [full-end];
+    
+    }
+
+    .buildControl {
+
+        grid-row: build-start / build-end;
+        grid-column: full-start / full-end;
+
+        justify-self: center;
+
+        margin-top: 2rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 510px) {
+
+    .buildControl {
+
+        grid-template-rows: min-content;
+        grid-template-columns: repeat(3, minmax(min-content, 1fr));
+
+        justify-items: center;
+
+        row-gap: 0;
+        column-gap: 1rem;
+
+        text-align: center;
+    
+    }
+
+    .sauceOptions {
+
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+
+        display: grid;
+        justify-items: center;
+    
+    }
+    
+    .toppingOptions {
+
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    
+       display: grid;
+       justify-items: center;
+
+    
+    }
+    
+    .baseOptions {
+
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    
+        display: grid;
+        justify-items: center;
+
+
+    
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .buildControl {
+
+       text-align: center;
+       column-gap: .7rem;
+    
+    }
+
+
+    .sauceOptions {
+
+
+        font-size: .9rem;
+    
+    }
+    
+    .toppingOptions {
+
+
+       font-size: .9rem;
+    
+    }
+    
+    .baseOptions {
+
+
+        font-size: .9rem;
+    
+    }
+
+
+}

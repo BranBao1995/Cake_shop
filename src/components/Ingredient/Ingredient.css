@@ -1,0 +1,91 @@
+
+.chocolate {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chocolate img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.jam {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.jam img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.kiwi {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.kiwi img {
+
+    display: block;
+    width: 50%;
+    height: auto;
+
+}
+
+
+.strawberry {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.strawberry img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+
+.eggCake {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.eggCake img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+
+.matchaCake {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.matchaCake img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
